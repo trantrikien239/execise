@@ -8,7 +8,9 @@ choices = ["rock", "paper", "scissors"]
 answers = {"Yes": True, "No": False}
 
 def p1_win(choice_1, choice_2):
-    if choices.index(choice_1) != 2:
+    if choices.index(choice_1) == choices.index(choice_2):
+        return "Tie"
+    elif choices.index(choice_1) != 2:
         if choices.index(choice_2) == choices.index(choice_1) + 1:
             return False
         else:
@@ -30,7 +32,9 @@ while answers[next_game]:
         p1_choice = input(ask_p1)
         p2_choice = input(ask_p2)
 
-    if p1_win(p1_choice,p2_choice):
+    if p1_win(p1_choice,p2_choice) == "Tie":
+        print("It's a tie")
+    elif p1_win(p1_choice,p2_choice):        
         print("Conratulation " + p1_name + ", you won!!!")
     else:
         print("Conratulation " + p2_name + ", you won!!!")
