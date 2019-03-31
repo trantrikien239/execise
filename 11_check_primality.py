@@ -1,4 +1,4 @@
-import print_all_divisor as dvs
+import print_all_divisors as dvs
 print("Sorry, wrong request, I thought you were asking for divisors. Now, what integer do you want to check primality?")
 num = dvs.get_int("Give me a positive integer: ")
 if len(dvs.find_all_divisors(num)) == 2:
