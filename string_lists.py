@@ -1,6 +1,6 @@
 import math
 strings = input("Please provide a string: ")
-print(type(strings))
+# print(type(strings))
 ln = math.floor(len(strings)/2)
 test = True
 for i in range(ln):
