@@ -1,8 +1,7 @@
 #4.Print all divisor
 def getInt(text):
     try:
-        intInput = input(text)
-        intInput = int(intInput)
+        intInput = int(input(text))
         if intInput <= 0:
             raise
         return intInput
