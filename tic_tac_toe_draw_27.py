@@ -34,7 +34,7 @@ def board_update(board,player_number):
             player_number) + '! Where is your next move? ((x,y) - with (1,1) is the top left corner): ').split(',')]
 
     board[coordinate[0]][coordinate[1]] = player_number
-    print(tic_tag_toe_draw(board))
+    tic_tag_toe_draw(board)
     return board
 
 
@@ -47,7 +47,7 @@ if __name__ == '__main__':
     game_finished_count = False
     turn_count = 1
     print('Welcome to a game of tic tac toe!')
-    print(draw_board.draw_board(3,3))
+    draw_board.draw_board(3,3)
     while not game_finished_count:
         board = board_update(board,turn_count)
         if turn_count == 1:
